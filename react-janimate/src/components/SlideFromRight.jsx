@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from './styles/SlideFromLeft.module.css';
+import styles from './styles/SlideFromRight.module.css';
 
 const SlideFromLeft = ({ children }) => {
 

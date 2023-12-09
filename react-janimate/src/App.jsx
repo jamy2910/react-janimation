@@ -10,6 +10,9 @@ function App() {
 
   return (
     <main>
+      <SlideFromLeft>
+        <h2 className='headingOne'>Hello, World</h2>
+      </SlideFromLeft>
       <FadeFromTop>
         <h2 className='headingOne'>Hello, World</h2>
       </FadeFromTop>
