@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.containerView {
+    opacity: 1;
+}
+
+.boxSlide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: ease-in-out .5s;
+}
+
+.showBox {
+    width: 0%;
+}
+
