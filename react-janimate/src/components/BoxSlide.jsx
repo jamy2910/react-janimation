@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './styles/BoxSlide.module.css';
 
-const BoxSlide = ({children, backgroundColor}) => {
+const BoxSlide = ({children, backgroundColor, threshold}) => {
 
     const intersectionRef = useRef();
     const [inView, setInView] = useState();
@@ -14,7 +14,7 @@ const BoxSlide = ({children, backgroundColor}) => {
     }
 
     useEffect(() => {
-        const observer = new IntersectionObserver(callback, {root: null, rootMargin: '0px', threshold: .8});
+        const observer = new IntersectionObserver(callback, {root: null, rootMargin: '0px', threshold: threshold || .5});
         if(intersectionRef.current) observer.observe(intersectionRef.current);
         return () => {
             if(intersectionRef.current) observer.unobserve(intersectionRef.current);

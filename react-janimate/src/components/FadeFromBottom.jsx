@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles/FadeFromBottom.module.css';
 
-const FadeFromBottom = ({children}) => {
+const FadeFromBottom = ({children, hideOverflow, threshold}) => {
 
     const intersectionRef = useRef();
     const [inView, setInView] = useState();
@@ -14,7 +14,7 @@ const FadeFromBottom = ({children}) => {
     }
 
     useEffect(() => {
-        const observer = new IntersectionObserver(callback, {root: null, rootMargin: '0px', threshold: .8});
+        const observer = new IntersectionObserver(callback, {root: null, rootMargin: '0px', threshold: threshold || .5});
         if (intersectionRef.current) observer.observe(intersectionRef.current);
 
         return () => {
@@ -23,7 +23,7 @@ const FadeFromBottom = ({children}) => {
     }, []);
 
   return (
-    <div ref={intersectionRef} >
+    <div ref={intersectionRef} style={hideOverflow ? {overflowY: 'hidden'} : {overflowY: 'visible'}}>
       <div className={inView ? `${styles.containerView} ${styles.container}` : `${styles.container}`}>
         {children}
       </div>

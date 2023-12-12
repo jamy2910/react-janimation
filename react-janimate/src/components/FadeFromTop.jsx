@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import styles from './styles/FadeFromTop.module.css';
 
-const FadeFromTop = ({children}) => {
+const FadeFromTop = ({children, threshold}) => {
     const intersectionRef = useRef();
     const [inView, setInView] = useState();
 
@@ -13,7 +13,7 @@ const FadeFromTop = ({children}) => {
     }
 
     useEffect(() => {
-        const observer = new IntersectionObserver(callback, { root: null, rootMargin: '0px', threshold: .8 });
+        const observer = new IntersectionObserver(callback, { root: null, rootMargin: '0px', threshold: threshold || .5 });
         if (intersectionRef.current) observer.observe(intersectionRef.current);
 
         return () => {

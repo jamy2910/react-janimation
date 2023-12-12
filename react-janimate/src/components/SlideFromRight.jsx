@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles/SlideFromRight.module.css';
 
-const SlideFromLeft = ({ children }) => {
+const SlideFromRight = ({ children, hideOverflow, threshold }) => {
 
     const [inView, setInView] = useState(false);
     const intersectionRef = useRef();
@@ -14,7 +14,7 @@ const SlideFromLeft = ({ children }) => {
     }
 
     useEffect(() => {
-        const observer = new IntersectionObserver(callback, { root: null, rootMargin: '0px', threshold: 0.5 });
+        const observer = new IntersectionObserver(callback, { root: null, rootMargin: '0px', threshold: threshold || 0.5 });
 
         if (intersectionRef.current) {
             observer.observe(intersectionRef.current);
@@ -28,7 +28,7 @@ const SlideFromLeft = ({ children }) => {
     }, [])
 
     return (
-        <div ref={intersectionRef} className={styles.mainContainer} >
+        <div ref={intersectionRef} className={styles.mainContainer} style={hideOverflow ? {overflowX: 'hidden'} : {overflowX: 'visible'}}>
             <div className={inView ? `${styles.containerView} ${styles.container}` : styles.container}>
                 {children}
             </div>
@@ -37,4 +37,4 @@ const SlideFromLeft = ({ children }) => {
     )
 }
 
-export default SlideFromLeft
+export default SlideFromRight

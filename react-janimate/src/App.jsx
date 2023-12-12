@@ -10,45 +10,45 @@ function App() {
 
   return (
     <main>
-      <SlideFromLeft>
-        <h2 className='headingOne'>Hello, World</h2>
-      </SlideFromLeft>
-      <FadeFromTop>
-        <h2 className='headingOne'>Hello, World</h2>
+
+      <FadeFromTop threshold={.2}>
+        <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>
       </FadeFromTop>
 
-      <FadeFromBottom>
-        <h2 className='headingOne'>Hello, world</h2>
+      <div className='fadeContainer'>
+        <SlideFromLeft>
+          <div className='fadeDiv'>Hello, World</div>
+        </SlideFromLeft>
+
+        <FadeFromBottom>
+          <div className='fadeDiv'>Hello, World</div>
+        </FadeFromBottom>
+
+        <SlideFromRight hideOverflow={false}>
+          <div className='fadeDiv'>Hello, World</div>
+        </SlideFromRight>
+      </div>
+
+      <SlideFromLeft>
+        <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>
+      </SlideFromLeft>
+
+      <SlideFromRight hideOverflow={true}>
+        <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>
+      </SlideFromRight>
+
+      <FadeFromBottom hideOverflow={true}>
+        <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>
       </FadeFromBottom>
 
+      <div style={{ textAlign: 'center', margin: '4rem' }}>
         <BoxSlide backgroundColor={'red'}>
-          <h2 className='headingOne'>Hello, World</h2>
-        </BoxSlide>
-
-
-      <div className='containerOne'>
-        <BoxSlide backgroundColor={'#159599'}>
-          <h2 className='headingOne'>Goodbye, Earth</h2>
+          <h2 style={{ fontSize: '2rem'}}>Hello, World</h2>
         </BoxSlide>
       </div>
 
-
-      <SlideFromLeft>
-        <h2 className='headingOne'>Hello World</h2>
-      </SlideFromLeft>
-
-      <SlideFromRight>
-        <h2 className='headingOne'>Hello, world</h2>
-      </SlideFromRight>
-
-      <FadeFromBottom>
-        <h2 className='headingOne'>Hello, world</h2>
-      </FadeFromBottom>
-
       <Expand>
-        <h2 className='headingOne'>Hello, World</h2>
-        <h2 className='headingOne'>Hello, World</h2>
-        <h2 className='headingOne'>Hello, World</h2>
+        <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>
       </Expand>
 
     </main>
