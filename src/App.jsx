@@ -5,11 +5,14 @@ import SlideFromLeft from './components/SlideFromLeft';
 import SlideFromRight from './components/SlideFromRight';
 import FadeFromTop from './components/FadeFromTop';
 import Expand from './components/Expand';
-
 function App() {
 
   return (
     <main>
+
+      <FadeFromBottom>
+        <h2 className='headingOne'>Hello, World</h2>
+      </FadeFromBottom>
 
       <FadeFromTop threshold={.2}>
         <div className='fadeDiv' style={{ width: 'auto', marginBottom: '1rem' }}>Hello, World</div>

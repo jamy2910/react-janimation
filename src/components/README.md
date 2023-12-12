@@ -1,4 +1,4 @@
-### react-janimate
+### react-janimation
 
 The simplest **animation-on-scroll** library.
 
