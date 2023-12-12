@@ -1,10 +1,11 @@
 import './App.css'
-import FadeFromBottom from './components/FadeFromBottom';
 import BoxSlide from './components/BoxSlide';
-import SlideFromLeft from './components/SlideFromLeft';
+import SlidFromLeft from './components/SlideFromLeft';
 import SlideFromRight from './components/SlideFromRight';
 import FadeFromTop from './components/FadeFromTop';
 import Expand from './components/Expand';
+import { FadeFromBottom, SlideFromLeft } from 'react-janimation';
+
 function App() {
 
   return (
