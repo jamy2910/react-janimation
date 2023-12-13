@@ -14,14 +14,15 @@
 .boxSlide {
     position: absolute;
     top: 0;
-    bottom: 0;
+    height: 100%;
     width: 100%;
     transition: ease-in-out .5s;
     opacity: 1;
+    transform-origin: 0% 100%;
 }
 
 .showBox {
     opacity: 0;
-    width: 0%;
+    transform: scaleX(0);
 }
 

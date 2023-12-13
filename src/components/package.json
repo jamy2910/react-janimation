@@ -1,6 +1,6 @@
 {
   "name": "react-janimation",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The simplest react animation-on-scroll package",
   "main": "index",
   "scripts": {
