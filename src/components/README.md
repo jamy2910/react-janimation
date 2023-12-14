@@ -1,4 +1,4 @@
-### react-janimation
+### react-janimate
 
 The simplest **animation-on-scroll** library.
 
@@ -24,9 +24,19 @@ The other prop that can be used is **hideOverflow**. This is a true/false value 
 
 `<FadeFromBottom hideOverflow={true}>`
 
+The `<BoxSlide>` component also needs to take a backgroundColor prop. This will take any css color value.
+```
+<BoxSlide backgroundColor={'red'}>
+    <h2>Hello World</h2>
+</BoxSlide>
+```
+
 Although not very customizable or flexible it is designed to be quick and easy to make a site more responsive as fast as possible. Just install, wrap some elements in an animation container and you're done.
 
 Happy Coding!
+
+
+To see a demo of this package go to: https://jamy2910.github.io/haven-ai-concept/
 
 
 
